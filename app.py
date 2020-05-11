@@ -52,7 +52,7 @@ def predict():
     X = cv.fit_transform(X)
 
     from sklearn.model_selection import KFold, RepeatedKFold
-    kf = KFold(n_splits=3, random_state=42, shuffle=False)
+    kf = KFold(n_splits=9, random_state=42, shuffle=False)
     print(kf)  # buat tau Kfold dan parameter defaultnya
     i = 1  # ini gapenting, cuma buat nandain fold nya.
     for train_index, test_index in kf.split(X):
